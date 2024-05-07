@@ -9,43 +9,44 @@
     <script defer src="app.js"></script>
 </head>
 
-<body class="corps bg-gris-clair">
-    <div class="conteneur py-8">
-        <h1 id="texte3">Liste des commentaires</h1>
+<body>
+    <div class="conteneur">
+        <h1>Liste des commentaires</h1>
         <!-- Commentaires -->
-        
         <div class="commentaire">
-            <h2 class="titre-commentaire">Emily Selman</h2>
-            <p class="contenu-commentaire">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis ratione eos ipsum incidunt, ut id debitis fugiat cumque omnis, exercitationem, dolores obcaecati maiores eaque architecto delectus distinctio odio et.</p>
+            <h2>Emily Selman</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis ratione eos ipsum incidunt, ut id debitis fugiat cumque omnis, exercitationem, dolores obcaecati maiores eaque architecto delectus distinctio odio et.</p>
         </div>
         <div class="commentaire">
-            <h2 class="titre-commentaire">Hector Gibbons</h2>
-            <p class="contenu-commentaire">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, enim vitae quasi culpa est, excepturi cum voluptatum exercitationem id, deleniti similique maiores! Totam, itaque praesentium quod ipsa quos ratione et.</p>
+            <h2>Hector Gibbons</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, enim vitae quasi culpa est, excepturi cum voluptatum exercitationem id, deleniti similique maiores! Totam, itaque praesentium quod ipsa quos ratione et.</p>
         </div>
         <div class="commentaire">
-            <h2 class="titre-commentaire">Mark Edwards</h2>
-            <p class="contenu-commentaire">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae accusantium quae doloribus. Nobis ipsam libero asperiores a velit ab nemo facere molestias quisquam. Libero, repudiandae dignissimos. Doloribus hic placeat soluta?</p>
+            <h2>Mark Edwards</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae accusantium quae doloribus. Nobis ipsam libero asperiores a velit ab nemo facere molestias quisquam. Libero, repudiandae dignissimos. Doloribus hic placeat soluta?</p>
         </div>
         
         <!-- Formulaire de commentaire -->
-        <h2 class="titre-formulaire">Écrire un commentaire</h2>
-        <form id="formulaire-commentaire">
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label for="prenom" class="label-formulaire">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" class="input-formulaire" placeholder="Entrez votre prénom">
-                </div>
-                <div>
-                    <label for="nom" class="label-formulaire">Nom</label>
-                    <input type="text" id="nom" name="nom" class="input-formulaire" placeholder="Entrez votre nom">
-                </div>
+        <h2>Écrire un commentaire</h2>
+        <div class="form">
+            <div class="form-first-name">
+                <label for="prenom">Prénom</label>
             </div>
-            <div class="mt-4">
-                <label for="commentaire" class="label-formulaire">Commentaire</label>
-                <textarea id="commentaire" name="commentaire" class="textarea-formulaire" rows="4" maxlength="500" placeholder="Entrez votre commentaire (max. 500 caractères)"></textarea>
+            <div>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom">
             </div>
-            <button id="bouton-envoyer" type="submit" class="bouton-envoyer">Envoyer</button>
-        </form>
+                
+
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
+            </div>
+            <div class="form-2">
+                <label for="commentaire">Commentaire</label>
+                <textarea id="commentaire" name="commentaire" rows="4" maxlength="500" placeholder="Entrez votre commentaire (max. 500 caractères)"></textarea>
+            </div>
+        </div>
+                
+        </div>
     </div>
 </body>
 
