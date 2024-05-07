@@ -1,0 +1,68 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Styles pour les commentaires */
+.comment {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.comment h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#commentForm label {
+    display: flex;
+    flex-direction: row;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#commentForm input[type="text"],
+#commentForm textarea {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#submitBtn {
+    background-color: #23b203;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
