@@ -15,14 +15,19 @@ body {
 }
 
 /* Styles pour le formulaire */
-.form-1 {
+.form {
     display: flex;
     flex-direction: row;
     width: 500px;
 }
+.form-first-name-2{
+    width: auto;
+    height: auto;
+}
+
 .form-2{
      height: 200px;
-     width: 500px;
+     width: auto;
 }
 
 label {
@@ -32,7 +37,7 @@ label {
 
 input[type="text"],
 textarea {
-    padding: 10px;
+    padding: 100px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
