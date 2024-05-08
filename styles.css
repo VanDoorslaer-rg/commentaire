@@ -8,42 +8,61 @@ body {
 }
 
 .conteneur {
+    min-height: 100vh;
     width: 80%;
     max-width: 800px;
     padding: 20px;
     border-radius: 8px;
+    /* margin-top: 20px; */
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles pour le formulaire */
+.commentaire {
+    margin-bottom: 20px;
+}
+
 .form {
     display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
     flex-direction: row;
-    width: 500px;
-}
-.form-first-name-2{
-    width: auto;
-    height: auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
 }
 
-.form-2{
-     height: 200px;
-     width: auto;
+.label-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    flex: 1;
 }
 
-label {
+.form label {
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-input[type="text"],
-textarea {
-    padding: 100px;
+.form input[type="text"],
+.form textarea {
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: calc(50% - 10px); /* Calcul de la largeur pour les deux inputs avec espace entre eux */
+    box-sizing: border-box; /* Inclure les bordures et le padding dans la largeur */
+    flex: 1; /* Pour que les inputs prennent tout l'espace disponible */
+    margin-right: 10px; /* Espacement entre les inputs */
 }
 
-button {
+.form textarea {
+    resize: vertical;
+}
+
+.form button {
     background-color: #007bff;
     color: #ffffff;
     border: none;
@@ -51,8 +70,9 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    width: 200px;
 }
 
-button:hover {
+.form button:hover {
     background-color: #0056b3;
 }

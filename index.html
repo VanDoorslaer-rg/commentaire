@@ -29,29 +29,24 @@
         <!-- Formulaire de commentaire -->
         <h2>Écrire un commentaire</h2>
         <div class="form">
-
-            <div class="form-first-name">
-                <label for="prenom">Prénom</label>
-            </div>
-
-            <div class="form-first-name-2">
-                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom">
+            <div class="form-row">
+                <div class="label-input">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom">
+                </div>
+                    
+                <div class="label-input">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
+                </div>
             </div>
                 
-            <div class="form-name">
-                <label for="nom">Nom</label>
-            </div>
-            <div class="form-name-2">
-                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
-            </div>
-            </div>
-            
-            <div class="form-2">
+            <div class="label-input">
                 <label for="commentaire">Commentaire</label>
                 <textarea id="commentaire" name="commentaire" rows="4" maxlength="500" placeholder="Entrez votre commentaire (max. 500 caractères)"></textarea>
             </div>
-        </div>
-                
+            
+            <button type="submit">Envoyer</button>
         </div>
     </div>
 </body>
