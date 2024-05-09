@@ -8,6 +8,9 @@ body {
 }
 
 .conteneur {
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
     min-height: 100vh;
     width: 80%;
     max-width: 800px;
@@ -16,6 +19,14 @@ body {
     /* margin-top: 20px; */
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+hr{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.H2-style{
+    margin-top: 70px;
 }
 
 .commentaire {
@@ -30,15 +41,17 @@ body {
 .form-row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
     justify-content: space-between;
+    gap: 20px; /* Ajouter un espace de 20px entre chaque paire d'étiquettes et d'éléments input */
+    margin-bottom: 30px;
 }
+
 
 .label-input {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    flex: 1;
+    
 }
 
 .form label {
@@ -46,32 +59,55 @@ body {
     margin-bottom: 8px;
 }
 
+.label-style {
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+}
+
+
+#L2 {
+    margin-left: 33em; /* Aligner #L2 à droite */
+}
+
 .form input[type="text"],
 .form textarea {
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    width: calc(50% - 10px); /* Calcul de la largeur pour les deux inputs avec espace entre eux */
-    box-sizing: border-box; /* Inclure les bordures et le padding dans la largeur */
-    flex: 1; /* Pour que les inputs prennent tout l'espace disponible */
+    font-size: 2em;
+    width: 100%; /* Assurez-vous que les textarea occupent toute la largeur du conteneur */
     margin-right: 10px; /* Espacement entre les inputs */
+    
 }
 
 .form textarea {
     resize: vertical;
 }
+#button {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3px;
+    margin-left: 87%;
+    border: 3px solid #00b36e; /* Bordure autour du bouton */
+    border-radius: 5px;
+}
 
 .form button {
-    background-color: #007bff;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 100px;
+    background-color: #00b36e;
     color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 3px; /* Ajustez la bordure du bouton si nécessaire */
     cursor: pointer;
     width: 200px;
+    height: 50px;
+    padding: 10px; /* Ajoutez du rembourrage pour le bouton */
+    font-size: 20px;
 }
+
 
 .form button:hover {
     background-color: #0056b3;

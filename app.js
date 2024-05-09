@@ -1,3 +1,44 @@
+// Récupérer l'élément titre "Écrire un commentaire"
+let writeCommentTitle = document.querySelector(".H2-style");
+
+// Fonction pour ajouter un commentaire à la liste des commentaires
+function ajouterCommentaire() {
+    // Récupérer les valeurs des champs
+    let prenom = document.getElementById("prenom").value;
+    let nom = document.getElementById("nom").value;
+    let commentaire = document.getElementById("commentaire").value;
+
+    // Créer un nouvel élément de commentaire
+    let newComment = document.createElement("div");
+    newComment.classList.add("commentaire");
+
+    // Contenu du commentaire
+    let contenuCommentaire = `
+        <h2>${prenom} ${nom}</h2>
+        <p>${commentaire}</p>
+    `;
+
+    // Ajouter le contenu au nouvel élément de commentaire
+    newComment.innerHTML = contenuCommentaire;
+
+    // Insérer le nouveau commentaire juste après le formulaire
+    writeCommentTitle.parentElement.insertBefore(newComment, writeCommentTitle);
+}
+
+// Ajouter un écouteur d'événements pour le bouton d'envoi
+document.querySelector("button[type='submit']").addEventListener("click", function (event) {
+    // Empêcher le formulaire de se soumettre par défaut
+    event.preventDefault();
+
+    // Vérifier si les champs sont vides
+    if (!verifierChampsVides()) {
+        // Si les champs ne sont pas vides, ajouter le commentaire
+        ajouterCommentaire();
+        // Effacer le formulaire
+        effacerFormulaire();
+    }
+});
+
 // Fonction pour vérifier si les champs du formulaire sont vides
 function verifierChampsVides() {
     try {
@@ -23,46 +64,3 @@ function effacerFormulaire() {
     document.getElementById("nom").value = "";
     document.getElementById("commentaire").value = "";
 }
-
-// Fonction pour ajouter un commentaire à la liste des commentaires
-function ajouterCommentaire() {
-    // Récupérer les valeurs des champs
-    let prenom = document.getElementById("prenom").value;
-    let nom = document.getElementById("nom").value;
-    let commentaire = document.getElementById("commentaire").value;
-
-    // Créer un nouvel élément de commentaire
-    let newComment = document.createElement("div");
-    newComment.classList.add("commentaire");
-
-    // Contenu du commentaire
-    let contenuCommentaire = `
-        <h2>${prenom} ${nom}</h2>
-        <p>${commentaire}</p>
-    `;
-
-    // Ajouter le contenu au nouvel élément de commentaire
-    newComment.innerHTML = contenuCommentaire;
-
-    // Récupérer l'élément titre "Écrire un commentaire"
-    let writeCommentTitle = document.querySelector("h2");
-
-    // Insérer le nouveau commentaire juste après le titre "Écrire un commentaire"
-    writeCommentTitle.insertAdjacentElement("beforebegin", newComment);
-}
-
-// Ajouter un écouteur d'événements pour le bouton d'envoi
-document.querySelector("button[type='submit']").addEventListener("click", function (event) {
-    // Empêcher le formulaire de se soumettre par défaut
-    event.preventDefault();
-
-    // Vérifier si les champs sont vides
-    if (!verifierChampsVides()) {
-        // Si les champs ne sont pas vides, ajouter le commentaire et effacer le formulaire
-        ajouterCommentaire();
-        effacerFormulaire();
-    }
-});
-
-// Effacer le formulaire lorsque la page est actualisée
-window.addEventListener("load", effacerFormulaire);
