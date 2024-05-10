@@ -23,6 +23,9 @@ function ajouterCommentaire() {
 
     // Insérer le nouveau commentaire juste après le formulaire
     writeCommentTitle.parentElement.insertBefore(newComment, writeCommentTitle);
+
+    // Insérer un hr après le nouveau commentaire
+    newComment.insertAdjacentHTML('afterend', '<hr>');
 }
 
 // Ajouter un écouteur d'événements pour le bouton d'envoi

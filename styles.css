@@ -15,10 +15,6 @@ body {
     width: 80%;
     max-width: 800px;
     padding: 20px;
-    border-radius: 8px;
-    /* margin-top: 20px; */
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 hr{
@@ -27,15 +23,17 @@ hr{
 }
 .H2-style{
     margin-top: 70px;
+    margin-bottom: 60px;
 }
 
 .commentaire {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centrer les éléments horizontalement */
 }
 
 .form-row {
@@ -66,7 +64,7 @@ hr{
 
 
 #L2 {
-    margin-left: 33em; /* Aligner #L2 à droite */
+    margin-left: 32em; /* Aligner #L2 à droite */
 }
 
 .form input[type="text"],
@@ -74,7 +72,7 @@ hr{
     padding: 10px;
     margin-bottom: 15px;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 2em;
     width: 100%; /* Assurez-vous que les textarea occupent toute la largeur du conteneur */
     margin-right: 10px; /* Espacement entre les inputs */
@@ -85,30 +83,34 @@ hr{
     resize: vertical;
 }
 #button {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 3px;
-    margin-left: 87%;
-    border: 3px solid #00b36e; /* Bordure autour du bouton */
-    border-radius: 5px;
+    margin-top: 20px;
+    align-self: flex-end; /* Aligner le bouton à droite à l'intérieur de son conteneur */
+    color: #ffffff;
+    border: 2px solid #00b36e; /* Bordure extérieure */
+    border-radius: 6px; /* Ajustez la bordure du bouton si nécessaire */
+    cursor: pointer;
+    width: auto; /* Largeur automatique pour s'adapter au contenu */
+    height: 40px; /* Hauteur du bouton */
+    font-size: 14px; /* Taille de la police */
+    padding: 2px 2px; /* Rembourrage */
+    background-color: transparent; /* Fond transparent */
+    outline: none; /* Supprimer la bordure d'accentuation */
+}
+
+#button:hover {
+    border-color: #028f59; /* Couleur de la bordure au survol */
 }
 
 .form button {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: 100px;
     background-color: #00b36e;
-    color: #ffffff;
-    border: none; /* Supprimer la bordure par défaut */
-    border-radius: 3px; /* Ajustez la bordure du bouton si nécessaire */
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
-    padding: 10px; /* Ajoutez du rembourrage pour le bouton */
-    font-size: 20px;
+    border: 2px solid #00b36e; /* Bordure intérieure */
+    border-radius: 6px; /* Ajustez la bordure du bouton si nécessaire */
+    width: auto; /* Largeur fixe pour tous les boutons dans le formulaire */
+    height: 40px; /* Hauteur du bouton */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px 20px; /* Rembourrage */
 }
 
-
 .form button:hover {
-    background-color: #0056b3;
+    background-color: #028f59;
 }
