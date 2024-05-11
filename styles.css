@@ -17,10 +17,15 @@ body {
     padding: 20px;
 }
 
-hr{
-    margin-top: 70px;
-    margin-bottom: 70px;
+hr {
+    margin-top: 20px; /* ou ajustez comme nécessaire */
+    margin-bottom: 20px; /* ou ajustez comme nécessaire */
+    border: none; /* Assurez-vous qu'il n'y a pas de bordure */
+    border-top: 2px solid #ccc; /* Ajoutez une bordure sur le dessus */
+    width: 100%; /* Assurez-vous qu'il occupe toute la largeur */
 }
+
+
 .H2-style{
     margin-top: 70px;
     margin-bottom: 60px;

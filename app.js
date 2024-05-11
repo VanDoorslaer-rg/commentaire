@@ -21,11 +21,12 @@ function ajouterCommentaire() {
     // Ajouter le contenu au nouvel élément de commentaire
     newComment.innerHTML = contenuCommentaire;
 
-    // Insérer le nouveau commentaire juste après le formulaire
-    writeCommentTitle.parentElement.insertBefore(newComment, writeCommentTitle);
+    // Créer un hr avant le titre "Écrire un commentaire"
+    let hrElement = document.createElement("hr");
+    writeCommentTitle.parentElement.insertBefore(hrElement, writeCommentTitle);
 
-    // Insérer un hr après le nouveau commentaire
-    newComment.insertAdjacentHTML('afterend', '<hr>');
+    // Insérer le nouveau commentaire juste après le hr
+    writeCommentTitle.parentElement.insertBefore(newComment, hrElement.nextSibling);
 }
 
 // Ajouter un écouteur d'événements pour le bouton d'envoi
