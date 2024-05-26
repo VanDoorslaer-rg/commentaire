@@ -38,26 +38,21 @@ document.querySelector("button[type='submit']").addEventListener("click", functi
 
 // Fonction pour vérifier si les champs du formulaire sont vides
 function verifierChampsVides() {
-    let prenom = document.getElementById("first-name").value.trim();
-    let nom = document.getElementById("last-name").value.trim();
-    let commentaire = document.getElementById("message").value.trim();
-
-    return prenom === '' || nom === '' || commentaire === '';
-}
-
-// Fonction pour effacer le formulaire après l'ajout d'un commentaire
-function effacerFormulaire() {
-    document.getElementById("first-name").value = '';
-    document.getElementById("last-name").value = '';
-    document.getElementById("message").value = '';
+    let prenom = document.getElementById("first-name").value;
+    let nom = document.getElementById("last-name").value;
+    let commentaire = document.getElementById("message").value;
+    return prenom === "" || nom === "" || commentaire === "";
 }
 
 // Fonction pour afficher un message d'erreur
 function afficherMessageErreur() {
     let errorMessage = document.getElementById("error-message");
     errorMessage.style.display = "block";
+}
 
-    setTimeout(function () {
-        errorMessage.style.display = "none";
-    }, 3000);
+// Fonction pour effacer les champs du formulaire
+function effacerFormulaire() {
+    document.getElementById("first-name").value = "";
+    document.getElementById("last-name").value = "";
+    document.getElementById("message").value = "";
 }
