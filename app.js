@@ -1,5 +1,5 @@
 // Sélectionner le titre de la liste des commentaires
-let writeCommentTitle = document.querySelector("h3.text-lg.font-medium.text-gray-900");
+let writeCommentTitle = document.querySelector("h3.text-lg.font-medium.text-warm-gray-900");
 
 // Fonction pour ajouter un commentaire à la liste des commentaires
 function ajouterCommentaire() {
@@ -47,16 +47,17 @@ function verifierChampsVides() {
 
 // Fonction pour effacer le formulaire après l'ajout d'un commentaire
 function effacerFormulaire() {
-    document.getElementById("first-name").value = "";
-    document.getElementById("last-name").value = "";
-    document.getElementById("message").value = "";
+    document.getElementById("first-name").value = '';
+    document.getElementById("last-name").value = '';
+    document.getElementById("message").value = '';
 }
 
-// Fonction pour afficher un message d'erreur si des champs sont vides
+// Fonction pour afficher un message d'erreur
 function afficherMessageErreur() {
     let errorMessage = document.getElementById("error-message");
-    errorMessage.classList.remove("hidden");
-    setTimeout(function() {
-        errorMessage.classList.add("hidden");
+    errorMessage.style.display = "block";
+
+    setTimeout(function () {
+        errorMessage.style.display = "none";
     }, 3000);
 }
